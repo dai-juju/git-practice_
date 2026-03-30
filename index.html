@@ -31,5 +31,18 @@
 </head>
 <body>
     <h1>Hello World!</h1>
+    <script>
+        const h1 = document.querySelector('h1');
+        const colors = ['#00ff88', '#ff0088', '#0088ff', '#ffaa00', '#aa00ff'];
+        let index = 0;
+
+        h1.style.cursor = 'pointer';
+        h1.addEventListener('click', () => {
+            index = (index + 1) % colors.length;
+            h1.style.color = colors[index];
+            h1.style.textShadow = `0 0 20px ${colors[index]}, 0 0 40px ${colors[index]}, 0 0 80px ${colors[index]}`;
+        });
+    </script>
+</body>
 </body>
 </html>
